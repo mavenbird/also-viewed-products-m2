@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!-- /**
+ * Mavenbird Technologies Private Limited
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://mavenbird.com/Mavenbird-Module-License.txt
+ *
+ * =================================================================
+ *
+ * @category   Mavenbird
+ * @package    Mavenbird_AlsoViewed
+ * @author     Mavenbird Team
+ * @copyright  Copyright (c) 2018-2024 Mavenbird Technologies Private Limited ( http://mavenbird.com )
+ * @license    http://mavenbird.com/Mavenbird-Module-License.txt
+ */ -->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="mavenbird_alsoviewed_view" resource="default" engine="innodb" comment="View Table">
+        <column xsi:type="int" name="view_id" padding="10" unsigned="true" nullable="false" identity="true" comment="View ID"/>
+        <column xsi:type="varchar" name="session_code" nullable="true" length="255" comment="View Session Code"/>
+        <column xsi:type="int" name="product_id" unsigned="false" nullable="true" comment="View Product Id"/>
+        <column xsi:type="varchar" name="product_sku" nullable="true" length="255" comment="View Product Sku"/>
+        <column xsi:type="varchar" name="ip" nullable="true" length="255" comment="View IP"/>
+        <column xsi:type="timestamp" name="created_at" on_update="false" nullable="true" comment="View Created At"/>
+        <column xsi:type="timestamp" name="updated_at" on_update="false" nullable="true" comment="View Updated At"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="view_id"/>
+        </constraint>
+        <index referenceId="MAVENBIRD_ALSOVIEWED_VIEW_FULLTEXT" indexType="fulltext">
+            <column name="session_code"/>
+            <column name="product_sku"/>
+            <column name="ip"/>
+        </index>
+    </table>
+</schema>

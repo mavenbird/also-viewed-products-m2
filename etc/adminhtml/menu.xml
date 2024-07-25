@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Mavenbird Technologies Private Limited
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://mavenbird.com/Mavenbird-Module-License.txt
+ *
+ * =================================================================
+ *
+ * @category   Mavenbird
+ * @package    Mavenbird_AlsoViewed
+ * @author     Mavenbird Team
+ * @copyright  Copyright (c) 2018-2024 Mavenbird Technologies Private Limited ( http://mavenbird.com )
+ * @license    http://mavenbird.com/Mavenbird-Module-License.txt
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
+    <menu>
+        <add id="Mavenbird_Extensions::extensions" title="Mavenbird" module="Magento_Backend" sortOrder="10" resource="Mavenbird_Extensions::extensions" />
+        <add id="Mavenbird_AlsoViewed::alsoviewed" title="Also Viewed" module="Mavenbird_AlsoViewed" parent="Mavenbird_Extensions::extensions" sortOrder="5" resource="Mavenbird_AlsoViewed::alsoviewed"/>
+        <add id="Mavenbird_AlsoViewed::alsoviewedtitle" title="Also Viewed" module="Mavenbird_AlsoViewed" parent="Mavenbird_Extensions::extensions" sortOrder="5" resource="Mavenbird_AlsoViewed::alsoviewedtitle"/>
+        <add id="Mavenbird_AlsoViewed::alsoviewed_config" title="Configuration" module="Mavenbird_AlsoViewed" sortOrder="10" parent="Mavenbird_AlsoViewed::alsoviewed" action="adminhtml/system_config/edit/section/alsoviewedsection" resource="Mavenbird_AlsoViewed::alsoviewed_config"/>
+    </menu>
+</config>

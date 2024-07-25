@@ -1,0 +1,26 @@
+{
+    "name": "mavenbird/alsoviewed",
+    "description": "The Magento 2 extension Who Viewed This Also Viewed enhances the product page by displaying products that other customers have viewed alongside the current product. This feature aims to assist customers in making purchase decisions by suggesting related items based on viewing patterns of other shoppers.",
+    "require": {
+        "php": ">=8.0.0"
+    },
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": "proprietary",
+    "authors": [
+        {
+          "name": "Mavenbird",
+          "email": "support@mavenbird.com",
+          "homepage": "https://www.mavenbird.com",
+          "role": "Technical Support"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4":  { 
+            "Mavenbird\\AlsoViewed\\": ""
+        }
+    }
+}
