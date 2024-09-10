@@ -23,8 +23,10 @@
     <acl>
         <resources>
             <resource id="Magento_Backend::admin">
-                <resource id="Mavenbird_Extensions::extensions" title="Mavenbird" sortOrder="168231">
-                    <resource id="Mavenbird_AlsoViewed::alsoviewed" title="Also Viewed" sortOrder="54" />
+                <resource id="Magento_Backend::system">
+                    <resource id="Mavenbird_AlsoViewed::extensions" title="Mavenbird Extensions - Configuration">
+                        <resource id="Mavenbird_AlsoViewed::configuration" title="Also Viewed" sortOrder="30"/>
+                    </resource>
                 </resource>
                 <resource id="Magento_Backend::stores">
                     <resource id="Magento_Backend::stores_settings">

@@ -123,7 +123,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      */
     public function lastviewproduct($proSku, $catId)
     {
-        $category = explode(",", $this->getConfig('alsoviewedsection/alsoviewedgroup/applytocategory'));
+        $category = explode(",", (string)$this->getConfig('alsoviewedsection/alsoviewedgroup/applytocategory'));
         $productSkuCount = [];
         $userSession = $this->_catalogSession->getMosViewUser();
         $model = $this->alsoViewedModel;
