@@ -32,7 +32,8 @@ $alsoProductLimit = $helper->getConfig('alsoviewedsection/alsoviewedgroup/limit'
 $abstractProductBlock = $block->getLayout()->createBlock(\Magento\Catalog\Block\Product\AbstractProduct::class);
 if (count($count_sku) > 0) {
 ?>
-    <h1><?= $escaper->escapeHtml(__($helper->getConfig('alsoviewedsection/alsoviewedgroup/title'))) ?></h1>
+    <div class="mb-alsoviwed">
+    <h2><?= $escaper->escapeHtml(__($helper->getConfig('alsoviewedsection/alsoviewedgroup/title'))) ?></h2>
     <?php
     $_helper = $viewModel->getOutputHelper();
     $imageBlock = $block->getLayout()->createBlock(\Magento\Catalog\Block\Product\Image::class);
@@ -85,5 +86,6 @@ if (count($count_sku) > 0) {
             }
             ?>
         </ol>
+    </div>
     </div>
 <?php } ?>
